@@ -1,0 +1,114 @@
+body{
+    background-color:dimgray;
+    display: flex;
+    justify-content: center;}
+
+.container{
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;}
+
+h2{
+    text-align: center;
+    font-size: 42pt;
+    color: ghostwhite;}
+
+.faqBox{    
+    border: 1px dimgray solid;
+    background-color:lightgray;
+    margin: 3px;
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;}
+
+.faqBoxSelected{
+    background: none;}
+
+.faqBox:hover{
+    cursor: pointer;
+    scale: 1.02;
+    background-color:rgb(238, 238, 235)}
+
+.headerFaq{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;}
+
+.chevRight{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    height: 100%;   
+    font-size: 22pt;
+    animation: .6s rotate-chevRight ease;}
+
+.chevRight:hover{
+    transform: rotate(45deg);
+    color: rgba(67, 175, 175, 0.925);
+    transition: all .5s ease;}
+
+.chevUp{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    height: 100%;   
+    font-size: 22pt;
+    color: white;
+    animation: 0.6s rotate-chev ease-in;}
+
+.chevUp:hover{
+    transform: rotate(180deg);
+    color: rgba(37, 245, 245, 0.925);
+    transition: all .7s ease;}
+    
+.question{
+    text-align: center;
+    font-weight: 400;
+    font-size: 16pt;
+    width:100%; }
+
+.questionSelected{
+    margin:0;
+    padding: 10px 25px;
+    color: ghostwhite;
+    background-color: rgb(69, 86, 102);
+   border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    width: 95%;
+    animation: 0.6s move-question;}
+
+.questionSelected:hover{
+    cursor: pointer;
+    background-color: rgb(104, 122, 139);}
+
+.answer{
+    margin: 0;
+    padding: 10px 30px;
+    background-color: ghostwhite;
+    animation: 0.6s move-answer;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;}
+
+@keyframes move-answer {
+    from{transform: translateY(-25%); }
+    to{ transform: translateY(0%); }
+}
+
+@keyframes move-question{
+    from{ transform: translateY(25%); }
+    to{ transform: translateY(0%);  }
+}
+
+@keyframes rotate-chev{
+    from{ transform: rotate(-225deg); }
+    to{ transform: rotate(0deg); }
+}
+
+@keyframes rotate-chevRight {
+    from{ transform: rotate(270deg); }
+    to{ transform: rotate(0deg); }
+}
